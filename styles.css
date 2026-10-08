@@ -242,3 +242,16 @@ footer ul{list-style:none;margin:0;padding:0;line-height:1.9}
   header.top .call{display:none}
 }
 .counties li.ring{font-family:Barlow,sans-serif;font-size:1.15rem;font-weight:600;text-transform:none;color:var(--muted);border-bottom:0;padding-top:18px}
+@media (max-width:440px){header.top .mark{font-size:1.45rem}}
+.mark{flex-wrap:wrap;row-gap:0}
+header.top .mark{flex-wrap:nowrap;white-space:nowrap}
+@media (max-width:440px){header.top .mark{font-size:1.3rem}}
+.mh > *,.foot > *{min-width:0}
+@media (max-width:520px){footer .mark{font-size:2rem}}
+@media (max-width:440px){header.top .mark{font-size:1.12rem;gap:.25em}header.top .wrap{gap:10px;padding:0 16px}.menu summary{padding:.4em .65em}}
+@media (max-width:370px){header.top .mark{font-size:1rem}}
+.two > *,.p-intro > *,.p-hero-grid > *,.est-grid > *,.area > *,.local-grid > *{min-width:0}
+
+.local h2{font-size:clamp(2.6rem,7vw,5.4rem)}
+@media (max-width:400px){.local h2,.hero h1{font-size:2.5rem}.p-hero h1{font-size:2.8rem}}
+html,body{overflow-x:clip}
