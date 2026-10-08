@@ -3,392 +3,218 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GBT Siteworks | Land Clearing, Site Prep & Dirt Work in Central Texas</title>
-<meta name="description" content="GBT Siteworks provides land clearing, site preparation, excavation, grading, building pads, roads, driveways and demolition across Limestone, McLennan and Freestone Counties. Based in Groesbeck, TX. Call 254-279-0808.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --limestone:#E9E8E3;
-    --stone:#CFCDC4;
-    --loam:#2B2621;
-    --loam-2:#3A332C;
-    --clay:#8C3B22;
-    --sand:#B9824F;
-    --caliche:#D8CDB4;
-    --flag:#FF5A1F;      /* survey flagging tape */
-    --ink:#2B2621;
-    --muted:#5E564D;
-    --wrap:1180px;
-    --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{margin:0;background:var(--limestone);color:var(--ink);font-family:Barlow,system-ui,sans-serif;font-size:18px;line-height:1.55}
-  img{max-width:100%;display:block}
-  a{color:inherit}
-  :focus-visible{outline:3px solid var(--flag);outline-offset:3px}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;margin:0;letter-spacing:.005em}
-  h2{font-size:clamp(2.6rem,6vw,4.4rem);text-transform:uppercase}
-  h3{font-size:1.9rem;text-transform:uppercase}
-  p{margin:0 0 1em}
-  .lede{font-size:1.2rem;max-width:62ch;color:var(--muted)}
-
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;gap:.6em;font-weight:700;font-size:1.05rem;text-decoration:none;padding:.85em 1.4em;border:2px solid currentColor;border-radius:3px}
-  .btn-flag{background:var(--flag);border-color:var(--flag);color:#1d1a17}
-  .btn-flag:hover{background:#ff7240;border-color:#ff7240}
-  .btn-line{color:var(--limestone)}
-  .btn-line:hover{background:rgba(255,255,255,.08)}
-
-  /* header */
-  header.top{background:var(--loam);color:var(--limestone);position:sticky;top:0;z-index:10}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
-  .mark{display:flex;align-items:baseline;gap:.35em;text-decoration:none;font-family:var(--display);font-weight:900;font-size:1.9rem;text-transform:uppercase;line-height:1}
-  .mark b{color:var(--flag);font-weight:900}
-  .mark span{font-weight:700;color:var(--caliche)}
-  nav.links{display:flex;gap:26px;font-weight:600;font-size:.98rem}
-  nav.links a{text-decoration:none;opacity:.85}
-  nav.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-  .call{font-weight:700;text-decoration:none;white-space:nowrap;background:var(--flag);color:#1d1a17;padding:.5em .9em;border-radius:3px}
-  @media (max-width:900px){nav.links{display:none}}
-
-  /* hero */
-  .hero{background:var(--loam);color:var(--limestone);position:relative;overflow:hidden}
-  .hero-copy{padding:80px 24px 40px;max-width:var(--wrap);margin:0 auto;position:relative;z-index:2}
-  .hero h1{font-size:clamp(4rem,13vw,10.5rem);text-transform:uppercase;font-weight:900;line-height:.86;max-width:10ch}
-  .hero .sub{font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:500;max-width:34ch;margin:28px 0 32px;color:var(--caliche)}
-  .hero .ctas{display:flex;flex-wrap:wrap;gap:14px}
-  .strata{display:block;width:100%;height:auto;margin-top:-30px}
-  .strata-key{display:flex;flex-wrap:wrap;gap:6px 28px;font-size:.92rem;color:var(--caliche);padding:18px 24px 26px;max-width:var(--wrap);margin:0 auto}
-  .strata-key i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:8px;vertical-align:-1px}
-
-  section{padding:96px 0}
-
-  /* services */
-  .services-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
-  @media (max-width:800px){.services-head{grid-template-columns:1fr}}
-  .svc-list{border-top:3px solid var(--loam)}
-  .svc{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:12px 48px;padding:28px 0;border-bottom:1px solid var(--stone)}
-  .svc h3{font-size:2.1rem}
-  .svc p{margin:0;max-width:60ch}
-  @media (max-width:700px){.svc{grid-template-columns:1fr}}
-
-  /* whole site sequence */
-  .whole{background:var(--clay);color:#F5ECE4}
-  .whole .lede{color:#F0D9CB}
-  .steps{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);counter-reset:s}
-  .steps li{counter-increment:s;padding:24px 20px 0 0;border-top:4px solid rgba(255,255,255,.35);position:relative}
-  .steps li:first-child{border-top-color:var(--loam)}
-  .steps li:last-child{border-top-color:var(--flag)}
-  .steps li::before{content:counter(s);font-family:var(--display);font-weight:900;font-size:3.4rem;line-height:1;display:block;margin-bottom:10px;opacity:.55}
-  .steps strong{display:block;font-size:1.15rem;margin-bottom:4px}
-  .steps span{font-size:.98rem;color:#F0D9CB}
-  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:28px}}
-  @media (max-width:520px){.steps{grid-template-columns:1fr}}
-
-  /* manufactured homes */
-  .mh{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-  @media (max-width:860px){.mh{grid-template-columns:1fr;gap:36px}}
-  .mh .tag{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,3rem);line-height:1;color:var(--clay);margin:24px 0 20px;text-transform:uppercase}
-  .check{list-style:none;margin:0;padding:0;columns:2;column-gap:28px;background:#fff;border-left:6px solid var(--flag);padding:28px 32px}
-  .check li{break-inside:avoid;padding:9px 0 9px 30px;position:relative;font-weight:600}
-  .check li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:9px;border-left:3px solid var(--clay);border-bottom:3px solid var(--clay);transform:rotate(-45deg)}
-  @media (max-width:480px){.check{columns:1}}
-
-  /* projects */
-  .projects{background:var(--loam);color:var(--limestone)}
-  .projects .lede{color:var(--caliche)}
-  .gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:10px;margin-top:48px}
-  .gallery figure{margin:0;position:relative;overflow:hidden;background:var(--loam-2);border-radius:2px}
-  .gallery figure:nth-child(1){grid-column:span 4;grid-row:span 2}
-  .gallery figure:nth-child(2){grid-column:span 2}
-  .gallery figure:nth-child(3){grid-column:span 2}
-  .gallery figure:nth-child(4),.gallery figure:nth-child(5),.gallery figure:nth-child(6){grid-column:span 2}
-  .gallery img{width:100%;height:100%;object-fit:cover}
-  .gallery .ph{position:absolute;inset:0;background:
-      repeating-linear-gradient(170deg,transparent 0 22px,rgba(185,130,79,.13) 22px 24px),
-      linear-gradient(180deg,var(--loam-2),#4a3a2c)}
-  .gallery figcaption{position:absolute;left:0;bottom:0;padding:12px 16px;font-weight:600;font-size:.95rem;background:linear-gradient(transparent,rgba(0,0,0,.6));width:100%}
-  @media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gallery figure:nth-child(n){grid-column:span 1;grid-row:span 1}.gallery figure:nth-child(1){grid-column:span 2;grid-row:span 2}}
-
-  /* area */
-  .area{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-  @media (max-width:860px){.area{grid-template-columns:1fr;gap:32px}}
-  .counties{list-style:none;margin:0;padding:0}
-  .counties li{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1;text-transform:uppercase;padding:10px 0;border-bottom:3px solid var(--loam)}
-  .counties li small{display:block;font-family:Barlow;font-weight:500;font-size:1rem;text-transform:none;color:var(--muted);margin-top:4px}
-  .towns{font-weight:600;margin:24px 0}
-  .beyond{background:var(--caliche);padding:20px 24px;border-radius:2px}
-
-  /* estimate */
-  .estimate{background:#fff}
-  .est-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
-  @media (max-width:900px){.est-grid{grid-template-columns:1fr;gap:40px}}
-  .bigphone{display:block;font-family:var(--display);font-weight:900;font-size:clamp(3rem,7vw,5rem);line-height:1;text-decoration:none;color:var(--clay);margin:24px 0 8px}
-  .bigphone:hover{color:var(--flag)}
-  form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
-  .full{grid-column:1/-1}
-  @media (max-width:560px){form{grid-template-columns:1fr}}
-  label{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px}
-  input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:.75em .85em;border:2px solid var(--stone);border-radius:3px;background:var(--limestone);color:var(--ink)}
-  input:focus,select:focus,textarea:focus{border-color:var(--loam);outline:none;box-shadow:0 0 0 3px rgba(255,90,31,.35)}
-  textarea{min-height:130px;resize:vertical}
-  form .btn{justify-content:center;cursor:pointer;font-family:inherit}
-  .note{font-size:.93rem;color:var(--muted);margin:0}
-
-  /* about */
-  .about{display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start}
-  @media (max-width:860px){.about{grid-template-columns:1fr;gap:24px}}
-
-  /* footer */
-  footer{background:var(--loam);color:var(--caliche);padding:64px 0 40px}
-  .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
-  @media (max-width:760px){.foot{grid-template-columns:1fr}}
-  footer .mark{font-size:2.4rem;color:var(--limestone)}
-  footer a{text-decoration:none}
-  footer a:hover{text-decoration:underline}
-  footer h4{font-family:Barlow;font-size:1rem;color:var(--limestone);margin:0 0 10px}
-  .fine{border-top:1px solid #4a423a;margin-top:48px;padding-top:20px;font-size:.88rem}
-
-  /* sticky mobile call bar */
-  .mobile-call{display:none}
-  @media (max-width:700px){
-    .mobile-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--flag);color:#1d1a17;font-weight:700;justify-content:center;padding:15px;text-decoration:none;font-size:1.1rem}
-    body{padding-bottom:56px}
-    header.top .call{display:none}
-  }
-</style>
+<title>GBT Siteworks | Land Clearing, Site Prep &amp; Dirt Work in Central Texas</title>
+<meta name="description" content="GBT Siteworks provides land clearing, site preparation, excavation, grading, building pads, roads, driveways and demolition across Limestone, Freestone, Hill and McLennan Counties. Based in Groesbeck, TX. Call 254-279-0808.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="GBT Siteworks home"><b>GBT</b><span>Siteworks</span></a>
+    <a class="mark" href="/" aria-label="GBT Siteworks home"><b>GBT</b><span>Siteworks</span></a>
     <nav class="links" aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#area">Service area</a>
-      <a href="#estimate">Contact</a>
+      <details class="dd"><summary>Services</summary><div class="dd-panel"><a href="/land-clearing">Land clearing</a><a href="/forestry-mulching">Forestry mulching</a><a href="/site-preparation">Site preparation</a><a href="/excavation-grading">Excavation &amp; grading</a><a href="/pads">Building &amp; mobile home pads</a><a href="/roads-driveways">Roads &amp; driveways</a><a href="/demolition">Demolition</a><a href="/drainage-levees">Drainage &amp; levees</a><a href="/septic">Septic systems</a><a href="/dumpster-rental">Dumpster rental</a></div></details>
+      <a href="/#projects">Projects</a>
+      <a href="/#about">About</a>
+      <a href="/#area">Service area</a>
+      <a href="/#estimate">Contact</a>
     </nav>
     <a class="call" href="tel:+12542790808">254-279-0808</a>
+    <details class="menu"><summary>Menu</summary>
+      <div class="menu-panel">
+        <a href="/">Home</a>
+        <p class="grp">Services</p><div class="sub"><a href="/land-clearing">Land clearing</a><a href="/forestry-mulching">Forestry mulching</a><a href="/site-preparation">Site preparation</a><a href="/excavation-grading">Excavation &amp; grading</a><a href="/pads">Building &amp; mobile home pads</a><a href="/roads-driveways">Roads &amp; driveways</a><a href="/demolition">Demolition</a><a href="/drainage-levees">Drainage &amp; levees</a><a href="/septic">Septic systems</a><a href="/dumpster-rental">Dumpster rental</a></div>
+        <a href="/#projects">Projects</a>
+        <a href="/#about">About</a>
+        <a href="/#area">Service area</a>
+        <a href="/#estimate">Request an estimate</a>
+        <a href="tel:+12542790808">Call 254-279-0808</a>
+      </div>
+    </details>
   </div>
 </header>
+<main>
 
-<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-copy">
+    <h1 id="hero-h">Build on solid ground.</h1>
+    <p class="sub">Land clearing, site preparation, excavation and dirt work across Central Texas. From right here in Groesbeck.</p>
+    <div class="ctas">
+      <a class="btn btn-flag" href="#estimate">Request an estimate</a>
+      <a class="btn btn-line" href="tel:+12542790808">Call 254-279-0808</a>
+    </div>
+  </div>
+  <svg class="strata" viewBox="0 0 1440 360" preserveAspectRatio="none" role="img" aria-label="Cross-section of ground going from overgrown brush on the left to a cleared, leveled building pad on the right">
+    <g fill="#4F5A3A"><ellipse cx="70" cy="92" rx="58" ry="46"/><ellipse cx="150" cy="104" rx="46" ry="34"/><ellipse cx="230" cy="86" rx="62" ry="52"/><ellipse cx="320" cy="108" rx="40" ry="28"/><ellipse cx="395" cy="100" rx="52" ry="38"/><ellipse cx="470" cy="116" rx="30" ry="20"/></g>
+    <g fill="#3B4530"><ellipse cx="110" cy="112" rx="40" ry="26"/><ellipse cx="270" cy="114" rx="44" ry="24"/><ellipse cx="430" cy="122" rx="30" ry="16"/></g>
+    <g><rect x="1040" y="64" width="250" height="62" fill="#E9E8E3"/><polygon points="1030,66 1165,30 1300,66" fill="#CFCDC4"/><rect x="1080" y="82" width="34" height="22" fill="#2B2621"/><rect x="1215" y="82" width="34" height="22" fill="#2B2621"/><rect x="1150" y="84" width="26" height="42" fill="#B3122B"/></g>
+    <path fill="#4A3A2C" d="M0,128 C60,118 120,140 190,126 S320,138 400,124 S500,136 560,130 L640,150 C700,150 760,128 860,128 L1440,128 L1440,360 L0,360Z"/>
+    <path fill="#C9B98F" d="M900,126 L1400,126 L1420,146 L880,146Z"/>
+    <path fill="#7A4A3A" d="M0,168 C120,158 240,182 380,170 S640,186 820,172 S1120,182 1260,170 S1400,176 1440,172 L1440,360 L0,360Z"/>
+    <path fill="#B09A7A" d="M0,226 C160,214 300,238 470,226 S760,236 940,224 S1240,238 1440,226 L1440,360 L0,360Z"/>
+    <path fill="#D8CDB4" d="M0,280 C200,270 360,292 560,280 S900,290 1100,278 S1340,288 1440,282 L1440,360 L0,360Z"/>
+    <path fill="#A8A397" d="M0,328 C240,320 480,338 720,328 S1200,336 1440,326 L1440,360 L0,360Z"/>
+  </svg>
+  <div class="strata-key" aria-hidden="true">
+    <span><i style="background:#4F5A3A"></i>Raw land</span><span><i style="background:#C9B98F"></i>Finished pad</span><span><i style="background:#7A4A3A"></i>Clay</span><span><i style="background:#D8CDB4"></i>Caliche</span><span><i style="background:#A8A397"></i>Limestone</span>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero" style="padding:0" aria-labelledby="hero-h">
-    <div class="hero-copy">
-      <h1 id="hero-h">Build on solid ground.</h1>
-      <p class="sub">Land clearing, site preparation, excavation and dirt work across Central Texas.</p>
-      <div class="ctas">
-        <a class="btn btn-flag" href="#estimate">Request an estimate</a>
-        <a class="btn btn-line" href="tel:+12542790808">Call 254-279-0808</a>
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="services-head">
+      <h2 id="svc-h">What we do</h2>
+      <p class="lede">Complete land and site preparation for residential, commercial, agricultural and development projects. From raw acreage to a finished pad, driveway or construction-ready site.</p>
+    </div>
+    <div class="svc-list"><a class="svc" href="/land-clearing"><h3>Land clearing</h3><p>Trees, brush, overgrowth, lot clearing, acreage reclamation, fence lines, stump grinding and site cleanup.</p><span class="more">Details</span></a><a class="svc" href="/forestry-mulching"><h3>Forestry mulching</h3><p>Brush and trees ground up in place. No burn piles, no hauling, topsoil left where it belongs.</p><span class="more">Details</span></a><a class="svc" href="/site-preparation"><h3>Site preparation</h3><p>Getting raw property ready for construction, utilities, structures and access.</p><span class="more">Details</span></a><a class="svc" href="/excavation-grading"><h3>Excavation &amp; grading</h3><p>Cut-and-fill, grading, drainage correction, elevation changes, shaping and dirt moving.</p><span class="more">Details</span></a><a class="svc" href="/pads"><h3>Building &amp; mobile home pads</h3><p>Pads for manufactured and mobile homes, houses, shops, barns and commercial buildings.</p><span class="more">Details</span></a><a class="svc" href="/roads-driveways"><h3>Roads &amp; driveways</h3><p>New roads, ranch roads, construction entrances and driveways, including base prep, rebuilds and grading.</p><span class="more">Details</span></a><a class="svc" href="/demolition"><h3>Demolition</h3><p>Structure demolition, removal, debris cleanup and site restoration.</p><span class="more">Details</span></a><a class="svc" href="/drainage-levees"><h3>Drainage &amp; levees</h3><p>Levees, ditching, drainage improvements, water control and property shaping.</p><span class="more">Details</span></a><a class="svc" href="/septic"><h3>Septic systems</h3><p>New and replacement septic systems installed by a licensed installer, planned with the rest of the site.</p><span class="more">Details</span></a><a class="svc" href="/dumpster-rental"><h3>Dumpster rental</h3><p>Roll-off dumpsters for cleanouts, demolition, roofing and construction debris.</p><span class="more">Details</span></a></div>
+  </div>
+</section>
+
+<section class="whole" aria-labelledby="whole-h">
+  <div class="wrap">
+    <h2 id="whole-h">One contractor.<br>The whole site.</h2>
+    <p class="lede" style="margin-top:24px">We handle everything between raw land and construction, so you're not juggling three outfits and a schedule that never lines up.</p>
+    <ol class="steps">
+      <li><strong>Raw land</strong><span>Overgrown, uneven, no access.</span></li>
+      <li><strong>Clear</strong><span>Trees, brush and debris out.</span></li>
+      <li><strong>Excavate &amp; grade</strong><span>Shape it, fix the drainage.</span></li>
+      <li><strong>Pad &amp; road</strong><span>Compacted pad, a way in.</span></li>
+      <li><strong>Ready to build</strong><span>Hand off to your builder.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="local" id="about" aria-labelledby="local-h">
+  <div class="wrap local-grid">
+    <div>
+      <h2 id="local-h">Groesbeck born and raised.</h2>
+      <p class="lede">The people running GBT grew up in Groesbeck and still live here. We've driven these county roads our whole lives, and we know what this ground does after a wet spring.</p>
+      <p class="lede">When you call, you're calling a neighbor. We plan on seeing you around town after the job's done, so we do it right the first time.</p>
+      <p class="lede">We work with homeowners, landowners, builders, developers, farms, ranches and commercial clients to turn difficult or undeveloped property into usable, construction-ready ground.</p>
+    </div>
+    <svg class="benchmark" viewBox="0 0 400 400" role="img" aria-label="Survey benchmark marker reading GBT Siteworks, Groesbeck, Texas">
+  <defs><path id="ring" d="M200,200 m-148,0 a148,148 0 1,1 296,0 a148,148 0 1,1 -296,0"/></defs>
+  <circle cx="200" cy="200" r="196" fill="#9a7b4f"/>
+  <circle cx="200" cy="200" r="186" fill="#b8955f"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="#7e6240" stroke-width="2"/>
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#7e6240" stroke-width="2"/>
+  <text font-family="Barlow,sans-serif" font-weight="700" font-size="25" letter-spacing="3" fill="#4a3826">
+    <textPath href="#ring" startOffset="0">GBT SITEWORKS • GROESBECK TEXAS • LIMESTONE COUNTY •</textPath>
+  </text>
+  <line x1="200" y1="110" x2="200" y2="290" stroke="#4a3826" stroke-width="5"/>
+  <line x1="110" y1="200" x2="290" y2="200" stroke="#4a3826" stroke-width="5"/>
+  <polygon points="200,150 226,200 174,200" fill="#4a3826"/>
+  <circle cx="200" cy="200" r="7" fill="#C8102E"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Barlow,sans-serif" font-weight="700" font-size="17" fill="#4a3826">31.52° N</text>
+  <text x="200" y="272" text-anchor="middle" font-family="Barlow,sans-serif" font-weight="700" font-size="17" fill="#4a3826">96.53° W</text>
+  <text x="200" y="140" text-anchor="middle" font-family="Barlow,sans-serif" font-weight="700" font-size="15" fill="#4a3826">HOME</text>
+</svg>
+  </div>
+</section>
+
+<section aria-labelledby="mh-h">
+  <div class="wrap mh">
+    <div>
+      <h2 id="mh-h">Manufactured home site prep</h2>
+      <p class="tag">From vacant property to a construction-ready homesite.</p>
+      <p class="lede">Putting a manufactured or mobile home on rural land? We get the ground ready before the home shows up, so delivery and setup go the way they should.</p>
+      <a class="btn btn-dark" href="/pads">Pads &amp; homesites</a>
+    </div>
+    <ul class="check">
+      <li>Land clearing</li><li>House pad</li><li>Driveway &amp; access</li><li>Excavation</li>
+      <li>Grading</li><li>Drainage</li><li>Utility trenching</li><li>Site cleanup</li>
+    </ul>
+  </div>
+</section>
+
+<section class="projects" id="projects" aria-labelledby="proj-h">
+  <div class="wrap">
+    <h2 id="proj-h">Recent work</h2>
+    <p class="lede" style="margin-top:20px">Clearing, pads, roads and dirt work around Limestone, Freestone, Hill and McLennan Counties.</p>
+    <!-- SWAP IN REAL PHOTOS: replace each <div class="ph"></div> with <img src="/photos/your-file.jpg" alt="Describe the job"> -->
+    <div class="gallery">
+      <figure><div class="ph"></div><figcaption>Land clearing</figcaption></figure>
+      <figure><div class="ph"></div><figcaption>Building pad</figcaption></figure>
+      <figure><div class="ph"></div><figcaption>Driveway</figcaption></figure>
+      <figure><div class="ph"></div><figcaption>Excavation</figcaption></figure>
+      <figure><div class="ph"></div><figcaption>Demolition</figcaption></figure>
+      <figure><div class="ph"></div><figcaption>Drainage</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="area" aria-labelledby="area-h">
+  <div class="wrap area">
+    <div>
+      <h2 id="area-h">Based in Groesbeck. Working across Central Texas.</h2>
+      <p class="towns">Groesbeck, Mexia, Kosse, Thornton, Coolidge, Fairfield, Teague, Wortham, Hillsboro, Whitney, Hubbard, Waco, Mart, Corsicana, Marlin, Hearne, Franklin, Centerville, Buffalo and the communities in between.</p>
+      <p>We work with property owners, contractors, developers, farms, ranches and businesses.</p>
+      <p class="beyond"><strong>Have equipment, will travel.</strong> Outside these counties? Call anyway. If there's a job to bid, we'll come look at it.</p>
+    </div>
+    <ul class="counties">
+      <li>Limestone<small>Home county</small></li>
+      <li>Freestone</li>
+      <li>Hill</li>
+      <li>McLennan</li>
+      <li class="ring">Plus Navarro, Falls, Robertson &amp; Leon Counties</li>
+    </ul>
+  </div>
+</section>
+
+<section class="estimate" id="estimate" aria-labelledby="est-h">
+  <div class="wrap est-grid">
+    <div>
+      <h2 id="est-h">Have land that needs work?</h2>
+      <p style="margin-top:24px">Tell us what you're working with. The fastest way is a phone call.</p>
+      <a class="bigphone" href="tel:+12542790808">254-279-0808</a>
+      <p class="note">Have photos of the property? Text them to the same number.</p>
+      <p class="note" style="margin-top:24px">GBT Siteworks<br>PO Box 151<br>Groesbeck, TX 76642</p>
+    </div>
+    <!-- FORM ENDPOINT: replace YOUR_FORM_ID with a Formspree (or similar) form ID so submissions get emailed. -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div><label for="f-loc">Property location</label><input id="f-loc" name="location" placeholder="Town or county"></div>
+      <div><label for="f-type">Type of work</label>
+        <select id="f-type" name="work_type"><option>Land clearing</option><option>Forestry mulching</option><option>Site preparation</option><option>Excavation &amp; grading</option><option>Building &amp; mobile home pads</option><option>Roads &amp; driveways</option><option>Demolition</option><option>Drainage &amp; levees</option><option>Septic systems</option><option>Dumpster rental</option><option>Other</option></select>
       </div>
-    </div>
-
-    <!-- Soil cross-section: raw brush on the left, cleared and leveled pad on the right -->
-    <svg class="strata" viewBox="0 0 1440 360" preserveAspectRatio="none" role="img" aria-label="Cross-section of ground going from overgrown brush on the left to a cleared, leveled building pad on the right">
-      <!-- brush / trees on raw land -->
-      <g fill="#4F5A3A">
-        <ellipse cx="70" cy="92" rx="58" ry="46"/><ellipse cx="150" cy="104" rx="46" ry="34"/>
-        <ellipse cx="230" cy="86" rx="62" ry="52"/><ellipse cx="320" cy="108" rx="40" ry="28"/>
-        <ellipse cx="395" cy="100" rx="52" ry="38"/><ellipse cx="470" cy="116" rx="30" ry="20"/>
-      </g>
-      <g fill="#3B4530">
-        <ellipse cx="110" cy="112" rx="40" ry="26"/><ellipse cx="270" cy="114" rx="44" ry="24"/><ellipse cx="430" cy="122" rx="30" ry="16"/>
-      </g>
-      <!-- small house on finished pad -->
-      <g>
-        <rect x="1040" y="64" width="250" height="62" fill="#E9E8E3"/>
-        <polygon points="1030,66 1165,30 1300,66" fill="#CFCDC4"/>
-        <rect x="1080" y="82" width="34" height="22" fill="#2B2621"/>
-        <rect x="1215" y="82" width="34" height="22" fill="#2B2621"/>
-        <rect x="1150" y="84" width="26" height="42" fill="#8C3B22"/>
-      </g>
-      <!-- topsoil: rough on the left, flat compacted pad on the right -->
-      <path fill="#4A3A2C" d="M0,128 C60,118 120,140 190,126 S320,138 400,124 S500,136 560,130 L640,150 C700,150 760,128 860,128 L1440,128 L1440,360 L0,360Z"/>
-      <path fill="#C9B98F" d="M900,126 L1400,126 L1420,146 L880,146Z"/><!-- compacted pad -->
-      <path fill="#8C3B22" d="M0,168 C120,158 240,182 380,170 S640,186 820,172 S1120,182 1260,170 S1400,176 1440,172 L1440,360 L0,360Z"/>
-      <path fill="#B9824F" d="M0,226 C160,214 300,238 470,226 S760,236 940,224 S1240,238 1440,226 L1440,360 L0,360Z"/>
-      <path fill="#D8CDB4" d="M0,280 C200,270 360,292 560,280 S900,290 1100,278 S1340,288 1440,282 L1440,360 L0,360Z"/>
-      <path fill="#A8A397" d="M0,328 C240,320 480,338 720,328 S1200,336 1440,326 L1440,360 L0,360Z"/>
-    </svg>
-    <div class="strata-key" aria-hidden="true">
-      <span><i style="background:#4F5A3A"></i>Raw land</span>
-      <span><i style="background:#C9B98F"></i>Finished pad</span>
-      <span><i style="background:#8C3B22"></i>Red clay</span>
-      <span><i style="background:#D8CDB4"></i>Caliche</span>
-      <span><i style="background:#A8A397"></i>Limestone</span>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" aria-labelledby="svc-h">
-    <div class="wrap">
-      <div class="services-head">
-        <h2 id="svc-h">What we do</h2>
-        <p class="lede">Complete land and site preparation for residential, commercial, agricultural and development projects. From raw acreage to a finished pad, driveway or construction-ready site.</p>
-      </div>
-      <div class="svc-list">
-        <div class="svc"><h3>Land clearing</h3><p>Trees, brush, overgrowth, lot clearing, acreage reclamation, fence lines and site cleanup.</p></div>
-        <div class="svc"><h3>Site preparation</h3><p>Getting raw property ready for construction, utilities, structures and access.</p></div>
-        <div class="svc"><h3>Excavation &amp; grading</h3><p>Cut-and-fill, grading, drainage correction, elevation changes, shaping and dirt moving.</p></div>
-        <div class="svc"><h3>Building pads</h3><p>Pads for manufactured and mobile homes, houses, shops, barns and commercial buildings.</p></div>
-        <div class="svc"><h3>Roads &amp; driveways</h3><p>New roads, ranch roads, construction entrances and driveways, including base prep, rebuilds and grading.</p></div>
-        <div class="svc"><h3>Demolition</h3><p>Structure demolition, removal, debris cleanup and site restoration.</p></div>
-        <div class="svc"><h3>Levee &amp; drainage</h3><p>Levees, ditching, drainage improvements, water control and property shaping.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ONE CONTRACTOR -->
-  <section class="whole" aria-labelledby="whole-h">
-    <div class="wrap">
-      <h2 id="whole-h">One contractor.<br>The whole site.</h2>
-      <p class="lede" style="margin-top:24px">We handle everything between raw land and construction, so you're not juggling three outfits and a schedule that never lines up.</p>
-      <ol class="steps">
-        <li><strong>Raw land</strong><span>Overgrown, uneven, no access.</span></li>
-        <li><strong>Clear</strong><span>Trees, brush and debris out.</span></li>
-        <li><strong>Excavate &amp; grade</strong><span>Shape it, fix the drainage.</span></li>
-        <li><strong>Pad &amp; road</strong><span>Compacted pad, a way in.</span></li>
-        <li><strong>Ready to build</strong><span>Hand off to your builder.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- MANUFACTURED HOMES -->
-  <section aria-labelledby="mh-h">
-    <div class="wrap mh">
-      <div>
-        <h2 id="mh-h">Manufactured home site prep</h2>
-        <p class="tag">From vacant property to a construction-ready homesite.</p>
-        <p class="lede">Putting a manufactured or mobile home on rural land? We get the ground ready before the home shows up, so delivery and setup go the way they should.</p>
-      </div>
-      <ul class="check">
-        <li>Land clearing</li>
-        <li>House pad</li>
-        <li>Driveway &amp; access</li>
-        <li>Excavation</li>
-        <li>Grading</li>
-        <li>Drainage</li>
-        <li>Utility trenching</li>
-        <li>Site cleanup</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects" aria-labelledby="proj-h">
-    <div class="wrap">
-      <h2 id="proj-h">Recent work</h2>
-      <p class="lede" style="margin-top:20px">Clearing, pads, roads and dirt work around Limestone, McLennan and Freestone Counties.</p>
-      <!-- SWAP IN REAL PHOTOS: replace each <div class="ph"></div> with
-           <img src="photos/your-file.jpg" alt="Describe the job"> and update the caption.
-           Best first slot: a wide before/after or equipment-on-site shot. -->
-      <div class="gallery">
-        <figure><div class="ph"></div><figcaption>Land clearing</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Building pad</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Driveway</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Excavation</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Demolition</figcaption></figure>
-        <figure><div class="ph"></div><figcaption>Drainage</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE AREA -->
-  <section id="area" aria-labelledby="area-h">
-    <div class="wrap area">
-      <div>
-        <h2 id="area-h">Based in Groesbeck. Working across Central Texas.</h2>
-        <p class="towns">Groesbeck, Mexia, Fairfield, Teague, Wortham, Buffalo, Kosse, Thornton, Coolidge, Waco and surrounding communities.</p>
-        <p>We work with property owners, contractors, developers, farms, ranches and businesses.</p>
-        <p class="beyond"><strong>Bigger project outside Central Texas?</strong> We take on select larger projects anywhere in the state. Give us a call.</p>
-      </div>
-      <ul class="counties">
-        <li>Limestone<small>Home county</small></li>
-        <li>McLennan</li>
-        <li>Freestone</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" style="padding-top:0" aria-labelledby="about-h">
-    <div class="wrap about">
-      <h2 id="about-h">About GBT</h2>
-      <div>
-        <p class="lede" style="color:var(--ink)">GBT Siteworks is a land and site-work contractor based in Groesbeck. We work with homeowners, landowners, builders, developers, farms, ranches and commercial clients to turn difficult or undeveloped property into usable, construction-ready ground.</p>
-        <p class="lede">We own the equipment, we move the dirt, and we finish the job.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ESTIMATE -->
-  <section class="estimate" id="estimate" aria-labelledby="est-h">
-    <div class="wrap est-grid">
-      <div>
-        <h2 id="est-h">Request an estimate</h2>
-        <p style="margin-top:24px">The fastest way is a phone call.</p>
-        <a class="bigphone" href="tel:+12542790808">254-279-0808</a>
-        <p class="note">Have photos of the property? Text them to the same number.</p>
-        <p class="note" style="margin-top:24px">PO Box 151<br>Groesbeck, TX 76642</p>
-      </div>
-
-      <!-- FORM ENDPOINT: replace YOUR_FORM_ID with a Formspree (or similar) form ID so submissions get emailed. -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
-        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-        <div><label for="f-loc">Property location</label><input id="f-loc" name="location" placeholder="Town or county"></div>
-        <div><label for="f-type">Type of work</label>
-          <select id="f-type" name="work_type">
-            <option>Land clearing</option>
-            <option>Site preparation</option>
-            <option>Excavation / grading</option>
-            <option>Building pad</option>
-            <option>Mobile home pad</option>
-            <option>Road / driveway</option>
-            <option>Demolition</option>
-            <option>Levee / drainage</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="full"><label for="f-size">Approximate acreage or project size</label><input id="f-size" name="size" placeholder="e.g. 5 acres, 40×80 pad"></div>
-        <div class="full"><label for="f-desc">Tell us about the project</label><textarea id="f-desc" name="description"></textarea></div>
-        <div class="full"><button class="btn btn-flag" type="submit">Send estimate request</button></div>
-      </form>
-    </div>
-  </section>
+      <div class="full"><label for="f-size">Approximate acreage or project size</label><input id="f-size" name="size" placeholder="e.g. 5 acres, 40×80 pad"></div>
+      <div class="full"><label for="f-desc">Tell us about the project</label><textarea id="f-desc" name="description"></textarea></div>
+      <div class="full"><button class="btn btn-flag" type="submit">Send estimate request</button></div>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="mark" href="#top"><b>GBT</b><span>Siteworks</span></a>
-        <p style="margin-top:14px;max-width:40ch">Land clearing, site preparation, excavation, grading, pads, roads and demolition.</p>
+        <a class="mark" href="/"><b>GBT</b><span>Siteworks</span></a>
+        <p style="margin-top:14px;max-width:36ch">Land clearing, site prep and dirt work. Groesbeck born and raised.</p>
       </div>
+      <div><h4>Services</h4><ul><li><a href="/land-clearing">Land clearing</a></li><li><a href="/forestry-mulching">Forestry mulching</a></li><li><a href="/site-preparation">Site preparation</a></li><li><a href="/excavation-grading">Excavation &amp; grading</a></li><li><a href="/pads">Building &amp; mobile home pads</a></li><li><a href="/roads-driveways">Roads &amp; driveways</a></li><li><a href="/demolition">Demolition</a></li><li><a href="/drainage-levees">Drainage &amp; levees</a></li><li><a href="/septic">Septic systems</a></li><li><a href="/dumpster-rental">Dumpster rental</a></li></ul></div>
       <div>
         <h4>Contact</h4>
         <p><a href="tel:+12542790808">254-279-0808</a><br>PO Box 151<br>Groesbeck, TX 76642</p>
+        <p><a href="/#estimate">Request an estimate</a></p>
       </div>
       <div>
         <h4>Service area</h4>
-        <p>Limestone, McLennan &amp; Freestone Counties, plus select projects throughout Texas.</p>
+        <p>Limestone, Freestone, Hill &amp; McLennan Counties, plus Navarro, Falls, Robertson &amp; Leon, and jobs anywhere in Texas.</p>
       </div>
     </div>
-    <p class="fine">© <span id="yr">2026</span> GBT Siteworks</p>
+    <div class="fine"><span>© <span class="yr">2026</span> GBT Siteworks</span><span>Groesbeck, Texas</span></div>
   </div>
 </footer>
-
 <a class="mobile-call" href="tel:+12542790808">Call 254-279-0808</a>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+document.querySelectorAll('.yr').forEach(n=>n.textContent=new Date().getFullYear());
+// close menus when clicking elsewhere or following a link
+document.addEventListener('click',ev=>{document.querySelectorAll('details.dd[open],details.menu[open]').forEach(d=>{if(!d.contains(ev.target)||ev.target.closest('a'))d.removeAttribute('open')})});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')document.querySelectorAll('details[open]').forEach(d=>d.removeAttribute('open'))});
+</script>
 </body>
 </html>
